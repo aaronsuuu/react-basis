@@ -1,30 +1,51 @@
-# React + TypeScript + Vite
+# React 基本 Hook 練習專案
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+這個專案是我用來練習 React 基本 Hook 的專案。
+專案中僅包含了 React 的幾個基本 Hook，目的是熟悉 React 的基礎概念和用法。
 
-Currently, two official plugins are available:
+## 內容介紹
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+本專案僅包含以下 React 基本 Hook 的練習範例：
 
-## Expanding the ESLint configuration
+- `useState`
+- `useEffect`
+- `useReducer`
+- `useContext`
+- `useMemo`
+- `useRef`
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 安裝與使用
 
-- Configure the top-level `parserOptions` property like this:
+1. 確保你已經安裝了 [Node.js](https://nodejs.org/) 和 [npm](https://www.npmjs.com/)。
+   | 依賴套件 | 版本     |
+   | -------- | -------- |
+   | Node.js  | v20.12.1 |
+   | npm      | 10.5.0   |
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+2. `clone`這個專案到本地：
+    ```bash
+    git clone https://github.com/aaronsuuu/react-basis.git
+    ```
+3. 進入專案目錄：
+    ```bash
+    cd react-basis
+    ```
+4. 安裝相依套件：
+    ```bash
+    npm install
+    ```
+5. 啟動專案：
+    ```bash
+    npm run dev
+    ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+歡迎大家下載這個專案來跟我一起練習。
+
+## 聯絡方式
+
+如果你有任何問題或需要幫助，請聯絡我：
+
+- 電郵: small12112000@gmail.com
+- GitHub: [aaronsuuu](https://github.com/aaronsuuu)
+
+希望這個專案對你有幫助！一起加油吧！
