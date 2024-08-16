@@ -2,6 +2,7 @@ import Home from '@/pages/Home'
 import UseCallback from '@/pages/UseCallback'
 import UseContext from '@/pages/UseContext'
 import UseEffect from '@/pages/UseEffect'
+import UseImperativeHandle from '@/pages/UseImperativeHandle'
 import UseLayoutEffect from '@/pages/UseLayoutEffect'
 import UseMemo from '@/pages/UseMemo'
 import UseReducer from '@/pages/UseReducer'
@@ -19,5 +20,6 @@ export const routes = [
   { path: '/use-callback', element: <UseCallback />, name: 'useCallback' },
   { path: '/use-ref', element: <UseRef />, name: 'useRef' },
   { path: '/use-layout-effect', element: <UseLayoutEffect />, name: 'useLayoutEffect' },
+  { path: '/use-imperative-handle', element: <UseImperativeHandle />, name: 'useImperativeHandle' },
 ]
 export const router = createBrowserRouter(routes.map((el) => ({ path: el.path, element: el.element })))
