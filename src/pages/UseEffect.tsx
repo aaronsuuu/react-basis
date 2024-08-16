@@ -34,29 +34,42 @@ function UseEffect() {
   }, [counter])
 
   return (
-    <div className="p-4 flex flex-col gap-4">
-      <h1 className="text-xl text-secondary">打開 Console, 你會看到 useEffect 執行後 print 的內容</h1>
-      <div className="text-xl text-secondary">Couter: {counter}</div>
-      <div className="flex flex-row gap-2">
-        <button className="rounded-lg bg-primary px-2 py-1" onClick={() => setCounter(counter + 1)}>
-          Add
-        </button>
-        <button className="rounded-lg bg-primary px-2 py-1" onClick={() => setCounter(counter - 1)}>
-          Subtract
-        </button>
-        <button className="rounded-lg bg-primary px-2 py-1" onClick={() => setCounter(initState)}>
-          Reset
-        </button>
+    <div className="flex flex-col gap-2 divide-y">
+      <div className="w-1/2 p-4">
+        <p>
+          <span className="text-secondary text-xl">useEffect</span>
+          傳入的函式會在渲染後執行，並且在下次渲染前執行清除函式，第二個參數是一個陣列，用途：
+        </p>
+        <ul className="ml-8 list-decimal">
+          <li>如果沒有被傳入則每次渲染都會執行</li>
+          <li>如果是空陣列則只會在初次渲染後執行</li>
+          <li>如果有值則只有在值改變時才會執行</li>
+        </ul>
       </div>
-      <div className="w-8/12 max-h-[500px] overflow-auto border-surface border rounded-lg">
-        <div className="p-4">
-          {logs.map((log, index) => {
-            return (
-              <div className="text-lg text-surface" key={index}>
-                {index}: {log}
-              </div>
-            )
-          })}
+      <div className="p-4 flex flex-col gap-4">
+        <h1 className="text-xl text-secondary">打開 Console, 你會看到 useEffect 執行後 print 的內容</h1>
+        <div className="text-xl text-secondary">Couter: {counter}</div>
+        <div className="flex flex-row gap-2">
+          <button className="rounded-lg bg-primary px-2 py-1" onClick={() => setCounter(counter + 1)}>
+            Add
+          </button>
+          <button className="rounded-lg bg-primary px-2 py-1" onClick={() => setCounter(counter - 1)}>
+            Subtract
+          </button>
+          <button className="rounded-lg bg-primary px-2 py-1" onClick={() => setCounter(initState)}>
+            Reset
+          </button>
+        </div>
+        <div className="w-8/12 max-h-[500px] overflow-auto border-surface border rounded-lg">
+          <div className="p-4">
+            {logs.map((log, index) => {
+              return (
+                <div className="text-lg text-surface" key={index}>
+                  {index}: {log}
+                </div>
+              )
+            })}
+          </div>
         </div>
       </div>
     </div>
