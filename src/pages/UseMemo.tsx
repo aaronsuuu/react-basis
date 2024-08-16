@@ -12,7 +12,8 @@ function UseMemo() {
     <div className="flex flex-col gap-2 divide-y">
       <div className="p-2">
         <span className="text-xl text-secondary rounded-lg">useMemo</span>
-        <p>用於自動響應的計算, 並且只有在依賴的值改變時才會重新計算</p>
+        <p>用於自動響應的計算, 並且只有在依賴的值改變時才會重新計算, 可以作為函式的快取使用</p>
+        <p>但除非是計算效能耗損較大的函式, 或是被多個 useEffect 依賴的函式, 不然不一定有比純函式來得快</p>
       </div>
       <div className="p-2">
         <pre className="p-2 ">Trangle: {JSON.stringify(trangle, null, 2)}</pre>

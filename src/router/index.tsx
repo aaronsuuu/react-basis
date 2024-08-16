@@ -1,4 +1,5 @@
 import Home from '@/pages/Home'
+import UseCallback from '@/pages/UseCallback'
 import UseContext from '@/pages/UseContext'
 import UseEffect from '@/pages/UseEffect'
 import UseMemo from '@/pages/UseMemo'
@@ -13,5 +14,6 @@ export const routes = [
   { path: '/use-reducer', element: <UseReducer />, name: 'useReducer' },
   { path: '/use-context', element: <UseContext />, name: 'useContext' },
   { path: '/use-memo', element: <UseMemo />, name: 'useMemo' },
+  { path: '/use-callback', element: <UseCallback />, name: 'useCallback' },
 ]
 export const router = createBrowserRouter(routes.map((el) => ({ path: el.path, element: el.element })))
