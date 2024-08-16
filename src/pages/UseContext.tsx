@@ -1,7 +1,7 @@
 import CounterContext from '@/store/count-context'
 import { useContext, useState } from 'react'
 
-export function UseContext() {
+export default function UseContext() {
   const [count, setCount] = useState(0)
   return (
     <CounterContext.Provider value={{ count, setter: setCount }}>

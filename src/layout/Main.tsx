@@ -8,7 +8,9 @@ function Main() {
         <div className="text-xl font-bold">Learn React for Yourself</div>
         <div className="space-x-4"></div>
       </nav>
-      <RouterProvider router={router} />
+      <div className="p-4">
+        <RouterProvider router={router} />
+      </div>
     </main>
   )
 }
